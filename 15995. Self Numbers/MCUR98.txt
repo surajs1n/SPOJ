@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define LIM 1000000
+int main()
+{
+ int *arr,i,j,n,temp,sum=0,t;
+ arr = malloc(LIM*4);
+ for(i=1;i<LIM;i++)
+ {
+ if(!arr[i])
+ {
+ t=temp=i;
+ sum=0;
+ while(t)
+ {
+  sum += (t%10);
+  t /= 10;
+ }
+ temp += sum;
+ while(temp < LIM)
+ {
+ if(arr[temp] == 1)
+ break;
+ else
+ {
+ arr[temp] = 1;
+ t=temp; sum=0;
+ while(t)
+ {
+ sum += (t%10);
+ t /= 10;
+ }
+ temp += sum;
+ }
+ }
+ }
+ }
+ for(i=1;i<LIM;i++)
+ if(!arr[i])
+ printf("%i\n",i);
+ free(arr);
+ return 0;
+}

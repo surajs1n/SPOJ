@@ -1,0 +1,14 @@
+import sys
+
+a = 1
+b = 1
+ 
+n=int(sys.stdin.readline())
+ 
+while n :
+	temp = b
+	b += a
+	a = temp
+	n = n - 1
+
+print (b)

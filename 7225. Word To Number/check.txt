@@ -1,0 +1,5 @@
+#include<stdio.h>
+#include<string.h>
+#define C(y) strcmp(c,y)
+#define Z else if
+int main(){int t;char S[200],c[100],k;scanf("%i%c",&t,&k);while(t--){int s=0,i,j,f=0;gets(S);for(i=0;S[i]!=0;){for(j=-1;S[i]!=32&&S[i]!=0;)c[++j]=S[i++];c[++j]=0;if(S[i]!=0) i++;if(!C("one"))s+=1;Z(!C("two"))s+=2;Z(!C("three"))s+=3;Z(!C("four"))s+=4;Z(!C("five"))s+=5;Z(!C("six"))s+=6;Z(!C("seven"))s+=7;Z(!C("eight"))s+=8;Z(!C("nine"))s+=9;Z(!C("ten"))s+=10;Z(!C("eleven"))s+=11;Z(!C("twelve"))s+=12;Z(!C("thirteen"))s+=13;Z(!C("fourteen"))s+=14;Z(!C("fifteen"))s+=15;Z(!C("sixteen"))s+=16;Z(!C("seventeen"))s+=17;Z(!C("eighteen"))s+=18;Z(!C("nineteen"))s+=19;Z(!C("twenty"))s+=20;Z(!C("thirty"))s+=30;Z(!C("forty"))s+=40;Z(!C("fifty"))s+=50;Z(!C("sixty"))s+=60;Z(!C("seventy"))s+=70;Z(!C("eighty"))s+=80;Z(!C("ninety"))s+=90;Z(!C("hundred")){if(f){s+=99*(s%10);}else s*=100;}Z(!C("thousand")){s*=1000;f=1;}}printf("%i\n",s);}return 0;}

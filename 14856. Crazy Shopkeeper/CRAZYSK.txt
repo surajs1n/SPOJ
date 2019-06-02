@@ -1,0 +1,10 @@
+import sys
+t=int(sys.stdin.readline())
+while t:
+	x,n=map(int , sys.stdin.readline().split())
+	sum=x
+	while x>=n:
+		sum=sum+x/n
+		x=x/n + x%n
+	print (sum)
+	t=t-1
